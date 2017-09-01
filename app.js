@@ -1,17 +1,9 @@
-// long running function
-function waitThreeSeconds() {
-    var ms = 3000 + new Date().getTime();
-    while (new Date() < ms) {
-        console.log('finished function');
-    }
-}
+var person = new Object();
 
-function clickHandler() {
-    console.log('click event!');
-}
+person["firstname"] = "Tony";
+person["lastname"] = "Baloney";
 
-// listen for the click event
-document.addEventListener('click', clickHandler);
+var firstNameProperty = "firstname";
 
-waitThreeSeconds();
-console.log('finished execution');
+console.log(person);
+console.log(person[firstNameProperty]);
